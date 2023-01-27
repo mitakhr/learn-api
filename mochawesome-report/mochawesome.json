@@ -1,0 +1,395 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 11,
+    "passes": 10,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-26T09:38:49.908Z",
+    "end": "2023-01-26T09:38:55.120Z",
+    "duration": 5212,
+    "testsRegistered": 11,
+    "passPercent": 90.9090909090909,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f7bef0bd-0b4f-45d5-8556-d5e4a4b3ba21",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cd4a4590-aa08-45e1-aeab-af513de3dc48",
+          "title": "Delete Data",
+          "fullFile": "D:\\Bootcamp NEST\\test_api\\tests\\scenario\\delete-user.test.js",
+          "file": "\\tests\\scenario\\delete-user.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfully delete data",
+              "fullTitle": "Delete Data Should successfully delete data",
+              "timedOut": false,
+              "duration": 606,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.update_user();\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "4d4e5623-d973-4a9b-9e01-3ae409d123e8",
+              "parentUUID": "cd4a4590-aa08-45e1-aeab-af513de3dc48",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d4e5623-d973-4a9b-9e01-3ae409d123e8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 606,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "1d6dce63-8476-4354-9041-b92e7f184086",
+          "title": "List Users",
+          "fullFile": "D:\\Bootcamp NEST\\test_api\\tests\\scenario\\list-users-test.js",
+          "file": "\\tests\\scenario\\list-users-test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should succesfully get list users",
+              "fullTitle": "List Users Should succesfully get list users",
+              "timedOut": false,
+              "duration": 610,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const param = getParams(data.LIST_USERS_PARAM['page']);\nconst response = await reqresApi.list_users(param);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "c199962e-23d8-4cfd-a1c0-5f63a97d51c7",
+              "parentUUID": "1d6dce63-8476-4354-9041-b92e7f184086",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c199962e-23d8-4cfd-a1c0-5f63a97d51c7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "58760bbe-effb-475f-a1eb-d729725f74b6",
+          "title": "Register",
+          "fullFile": "D:\\Bootcamp NEST\\test_api\\tests\\scenario\\register.test.js",
+          "file": "\\tests\\scenario\\register.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfull register when insert valid data",
+              "fullTitle": "Register Should successfull register when insert valid data",
+              "timedOut": false,
+              "duration": 488,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.register(data.VALID_REGISTER); //valid_register ini data dari user.data.js\nassert.equal(response.status, 200); //cek http response\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);",
+              "err": {},
+              "uuid": "9652c1dd-5254-4acc-8a57-37692e113fba",
+              "parentUUID": "58760bbe-effb-475f-a1eb-d729725f74b6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should unsuccessfull register when insert invalid data",
+              "fullTitle": "Register Should unsuccessfull register when insert invalid data",
+              "timedOut": false,
+              "duration": 454,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.register(data.INVALID_REGISTER); //valid_register ini data dari user.data.js\nassert.equal(response.status, 400); //cek http response\nassert.isString(response.data.error);",
+              "err": {},
+              "uuid": "2d568ad3-41da-459f-9851-ec6390197da7",
+              "parentUUID": "58760bbe-effb-475f-a1eb-d729725f74b6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9652c1dd-5254-4acc-8a57-37692e113fba",
+            "2d568ad3-41da-459f-9851-ec6390197da7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 942,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "67a3e17d-069c-436d-90d3-0e4462dc7e4c",
+          "title": "User Resource",
+          "fullFile": "D:\\Bootcamp NEST\\test_api\\tests\\scenario\\resource-user.test.js",
+          "file": "\\tests\\scenario\\resource-user.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successful get list <Resource>",
+              "fullTitle": "User Resource Should successful get list <Resource>",
+              "timedOut": false,
+              "duration": 483,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.resource_user();\nassert.equal(response.status, 200); //cek http response",
+              "err": {},
+              "uuid": "90e5984b-be28-45ac-b17f-529806145125",
+              "parentUUID": "67a3e17d-069c-436d-90d3-0e4462dc7e4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should successful get single <resource>",
+              "fullTitle": "User Resource Should successful get single <resource>",
+              "timedOut": false,
+              "duration": 488,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.resource_user(data.SINGLE_RESOURCE);\n\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "e6bdc6d6-f95d-4a04-b0af-358cd9fc1db7",
+              "parentUUID": "67a3e17d-069c-436d-90d3-0e4462dc7e4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should unsuccessful get single <resource>",
+              "fullTitle": "User Resource Should unsuccessful get single <resource>",
+              "timedOut": false,
+              "duration": 463,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.invalid_resource_user();\nassert.equal(response.status, 404);",
+              "err": {},
+              "uuid": "c42969ca-ed32-4a55-a8d7-dd8779191624",
+              "parentUUID": "67a3e17d-069c-436d-90d3-0e4462dc7e4c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90e5984b-be28-45ac-b17f-529806145125",
+            "e6bdc6d6-f95d-4a04-b0af-358cd9fc1db7",
+            "c42969ca-ed32-4a55-a8d7-dd8779191624"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1434,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "26989db2-d0bc-45bc-be3b-9bbe289804bb",
+          "title": "Single User",
+          "fullFile": "D:\\Bootcamp NEST\\test_api\\tests\\scenario\\single-user.test.js",
+          "file": "\\tests\\scenario\\single-user.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfull get single user",
+              "fullTitle": "Single User Should successfull get single user",
+              "timedOut": false,
+              "duration": 485,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.single_user(data.SINGLE_USER);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "56b7dd6f-8acb-4628-8b9f-4d468dce00c6",
+              "parentUUID": "26989db2-d0bc-45bc-be3b-9bbe289804bb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should unsuccessfull get single user",
+              "fullTitle": "Single User Should unsuccessfull get single user",
+              "timedOut": false,
+              "duration": 119,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.single_user(data.USER_NOT_FOUND);\n       \nassert.equal(response.status, 404); //cek http response",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 404",
+                "estack": "AssertionError: expected 200 to equal 404\n    at Context.<anonymous> (file:///D:/Bootcamp%20NEST/test_api/tests/scenario/single-user.test.js:18:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- 200\n+ 404\n"
+              },
+              "uuid": "820113ea-706a-45a2-af20-510b62ab57c9",
+              "parentUUID": "26989db2-d0bc-45bc-be3b-9bbe289804bb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56b7dd6f-8acb-4628-8b9f-4d468dce00c6"
+          ],
+          "failures": [
+            "820113ea-706a-45a2-af20-510b62ab57c9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 604,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "5bab364e-05ea-4dbf-b7e9-b544e0313f48",
+          "title": "Update Data",
+          "fullFile": "D:\\Bootcamp NEST\\test_api\\tests\\scenario\\update-user.test.js",
+          "file": "\\tests\\scenario\\update-user.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfully update data (put)",
+              "fullTitle": "Update Data Should successfully update data (put)",
+              "timedOut": false,
+              "duration": 459,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.update_user(data.UPDATE_USER);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "75bf0542-8908-4af8-9871-ef785b5b6c85",
+              "parentUUID": "5bab364e-05ea-4dbf-b7e9-b544e0313f48",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should successfully update data (patch)",
+              "fullTitle": "Update Data Should successfully update data (patch)",
+              "timedOut": false,
+              "duration": 473,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await reqresApi.update_user(data.UPDATE_USER);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "dda2c1f8-7533-412d-99e3-7f0d4227af18",
+              "parentUUID": "5bab364e-05ea-4dbf-b7e9-b544e0313f48",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75bf0542-8908-4af8-9871-ef785b5b6c85",
+            "dda2c1f8-7533-412d-99e3-7f0d4227af18"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 932,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

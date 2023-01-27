@@ -1,0 +1,10 @@
+/node_modules
+.env
+.env.example 
+        .gitignore   
+        .mocharc.json
+        mochawesome-report/
+        package.json
+        report/
+        tests/
+        yarn.lock
